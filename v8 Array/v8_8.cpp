@@ -3,9 +3,12 @@
 #include<iostream>
 using namespace std;
 
-void reverseArr(int arr[],int size){
-    for(int i=0;i<size/2;i++){
-        swap(arr[i],arr[size-1-i]);
+void reverseArr(int arr[],int size){                
+    int start=0,end=size-1;                 //for(int i=0;i<size/2;i++){              
+    while(start<=end){                      //    swap(arr[i],arr[size-1-i]);
+        swap(arr[start],arr[end]);          //}
+        start++;
+        end--;
     }
 };
 
