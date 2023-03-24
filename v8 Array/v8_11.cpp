@@ -24,7 +24,6 @@ int main(){
     int arr1[2][2],arr2[2][2];
     inputMatrix(arr1,2,2);
     inputMatrix(arr2,2,2);
-    outputMatrix(arr1,2,2);
-    outputMatrix(arr2,2,2);
+    multiMatrix(arr1,arr2);
     return 0;
 }
