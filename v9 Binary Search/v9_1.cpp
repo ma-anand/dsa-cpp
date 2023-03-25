@@ -3,10 +3,13 @@
 #include<iostream>
 using namespace std;
 
-int binarySearch(int arr[], int size, int key){
+int binarySearch(int arr[],int size,int key){
     int start=0,end=size-1;
+
+    int mid=start+((end-start)/2);      //int mid=(start+end)/2;   ---->may be exceed the integer limit
+
+
     while(start<=end){
-        int mid=(start+end)/2;
         if(arr[mid]==key){
             return mid;
         }
@@ -16,18 +19,17 @@ int binarySearch(int arr[], int size, int key){
         else{
             end=mid-1;
         }
+        mid=start+((end-start)/2);      //int mid=(start+end)/2;   ---->may be exceed the integer limit
     }
     return -1;
-}
+};
 
 int main(){
-    int evenArr[6]={10,13,17,30,48,53};
-    int oddArr[7]={10,13,29,37,47,53,61};
+    int evenArr[6]={13,17,23,29,31,37};
+    int oddArr[5]={3,5,7,13,17};
     int key;
     cin>>key;
-    int index= binarySearch(evenArr,6,key);
-    cout<<index<<endl;;
+    cout<<"Index: "<<binarySearch(evenArr,6,key)<<endl;
     cin>>key;
-    index= binarySearch(oddArr,7,key);
-    cout<<index<<endl;;
+    cout<<"Index: "<<binarySearch(oddArr,5,key)<<endl;
 }
