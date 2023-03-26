@@ -7,6 +7,13 @@
 using namespace std;
 
 int main(){
+    //pair (data_type1, data_type2) Pair_name (value1, value2) ;
+    
+    /*
+    pair<int, double> PAIR1;
+    pair<string, char> PAIR2;
+    */
+
     pair<int,int>  g1;         //default
     g1.first=5;
     g1.second=7;
