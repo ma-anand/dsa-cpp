@@ -1,26 +1,28 @@
 //Peak Index in a Mountain Array
 //26th March, 2023
 #include<iostream>
+#include<vector>
 using namespace std;
 
-peakIndex(int arr[],int size){
-    int start=0,end=size-1;
-    int mid=start+(end-start)/2;
-    while(start<end){
-        if(arr[mid]<arr[mid-1]){
-            start=mid+1;
+int peakIndexInMountainArray(vector<int>& arr) {
+        int start=0,end=arr.size()-1;
+        int mid=start+(end-start)/2;
+        while(start<end){
+            if(arr[mid]<arr[mid+1]){
+                start=mid+1;
+            }
+            else{
+                end=mid;
+            }
+            mid=start+(end-start)/2;
         }
-        else{
-            end=mid;
-        }
-        mid=start+(end-start)/2;
+        return start;
     }
-    return start;
-}
 
 int main(){
-    int arr[4]={0,10,5,2};
-    int arr2[4]={0,2,1,0};
-    cout<<peakIndex(arr,4)<<endl;
-    cout<<peakIndex(arr2,4)<<endl;
+    vector<int> arr,arr2;
+    arr={1,2,3,4,5,3,1,0};
+    arr2={1,5,4,3,2,1,0};
+    cout<<"Index of peak of mountain is: "<<peakIndexInMountainArray(arr)<<endl;
+    cout<<"Index of peak of mountain is: "<<peakIndexInMountainArray(arr2)<<endl;
 }
