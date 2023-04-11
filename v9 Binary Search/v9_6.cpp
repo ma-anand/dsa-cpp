@@ -4,7 +4,7 @@
 using namespace std;
 
 bool isPossible(int arr[], int size, int num, int mid){
-	int studentCount=0,pageSum=0;
+	int studentCount=1,pageSum=0;
 	for(int i=0; i<size; i++){
 		if(pageSum+arr[i]<=mid){
 			pageSum+=arr[i];
@@ -40,7 +40,7 @@ int bookAllocation(int arr[], int size, int num){
 }
 
 int main(){
-	int arr[10]={10,20,30,40,};
+	int arr[4]={10,20,30,40};
 	int size=4;
 	int num;
 	cin>>num;
