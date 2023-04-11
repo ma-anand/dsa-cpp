@@ -1,17 +1,48 @@
 //Book Allocation
 //30th of March, 2023
-#include <iostream>
-#include <algorithm>
+#include<iostream>
 using namespace std;
 
-int main()
-{
-	int a[10] = {9,5,4,3,2,1,6,7,10,8}; 
-	sort(a, a+10);  //sorting
-	
-	 				
-	for(int i = 0; i <10; ++i)
-	{
-		cout << a[i] << " ";
+bool isPossible(int arr[], int size, int num, int mid){
+	int studentCount=0,pageSum=0;
+	for(int i=0; i<size; i++){
+		if(pageSum+arr[i]<=mid){
+			pageSum+=arr[i];
+		}
+		else{
+			studentCount++;
+			if(pageSum>mid || studentCount>num){
+				return false;
+			}
+			pageSum=arr[i];
+		}
 	}
+	return true;
+}
+
+int bookAllocation(int arr[], int size, int num){
+	int start=0,end,mid,sum=0,ans=-1;
+	for(int i=0;i<size;i++){
+		sum+=arr[i];
+	}
+	end=sum;
+	mid=start+(end-start)/2;
+	while(start<=end){
+		if(isPossible(arr,size,num,mid)){
+			ans=mid;
+			end=mid-1;
+		}else{
+			start=mid+1;
+		}
+		mid=start+(end-start)/2;
+	}
+	return ans;
+}
+
+int main(){
+	int arr[10]={10,20,30,40,};
+	int size=4;
+	int num;
+	cin>>num;
+	cout<<bookAllocation(arr,size,num);
 }
