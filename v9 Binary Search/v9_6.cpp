@@ -3,7 +3,7 @@
 #include<iostream>
 using namespace std;
 
-bool isPossible(int arr[], int size, int num, int mid){
+bool isPossible(int arr[], int size, int num, int mid){  //Chesker
 	int studentCount=1,pageSum=0;
 	for(int i=0; i<size; i++){
 		if(pageSum+arr[i]<=mid){
