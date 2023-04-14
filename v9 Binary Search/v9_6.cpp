@@ -40,8 +40,12 @@ int bookAllocation(int arr[], int size, int num){
 }
 
 int main(){
-	int arr[4]={10,20,30,40};
-	int size=4;
+	int size;
+	cin>>size;
+	int arr[size];
+	for(int i=0; i<size; i++){
+		cin>>arr[i];
+	}
 	int num;
 	cin>>num;
 	cout<<bookAllocation(arr,size,num);
