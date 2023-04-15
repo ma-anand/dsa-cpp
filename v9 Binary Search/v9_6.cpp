@@ -28,7 +28,7 @@ int bookAllocation(int arr[], int size, int num){
 	end=sum;
 	mid=start+(end-start)/2;
 	while(start<=end){
-		if(isPossible(arr,size,num,mid)){     //possible function
+		if(isPossible(arr,size,num,mid)){     //possible function to decide going lef or right
 			ans=mid;
 			end=mid-1;
 		}else{
