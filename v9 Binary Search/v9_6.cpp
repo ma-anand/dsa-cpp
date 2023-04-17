@@ -50,4 +50,3 @@ int main(){
 	cin>>num;
 	cout<<bookAllocation(arr,size,num);
 }
-//code studio problem
