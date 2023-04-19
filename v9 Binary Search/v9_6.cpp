@@ -48,5 +48,5 @@ int main(){
 	}
 	int num;
 	cin>>num;
-	cout<<bookAllocation(arr,size,num);    //function call
+	cout<<bookAllocation(arr,size,num);   
 }
