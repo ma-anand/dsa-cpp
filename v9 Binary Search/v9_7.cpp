@@ -3,6 +3,10 @@
 #include<iostream>
 using namespace std;
 
+bool isPossible(int arr[], int size, int countGiven, int mid){
+    
+}
+
 int painterPartition(int arr[], int size, int countGiven){
     int start=0;
     int sum=0,count=1;
@@ -13,7 +17,7 @@ int painterPartition(int arr[], int size, int countGiven){
     sum=0;
     int mid= start + (end-start)/2;
     while(start<=end){
-        if(sum+arr[i]<=mid){
+        if(isPossible(arr,size,countGiven,mid)){
             sum+=arr[i]
         }
         else{
@@ -27,5 +31,5 @@ int painterPartition(int arr[], int size, int countGiven){
 
 int main(){
     int arr[4]={5,5,5,5};
-    cout<<painterPartition(arr,4);
+    cout<<painterPartition(arr,4,2);
 }
