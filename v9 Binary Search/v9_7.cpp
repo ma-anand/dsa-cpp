@@ -31,5 +31,5 @@ int painterPartition(int arr[], int size, int countGiven){
 
 int main(){
     int arr[4]={5,5,5,5};
-    cout<<painterPartition(arr,4,2); //paint
+    cout<<painterPartition(arr,4,2); 
 }
