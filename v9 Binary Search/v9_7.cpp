@@ -7,7 +7,7 @@ bool isPossible(int arr[], int size, int countGiven, int mid){
     
 }
 
-int painterPartition(int arr[], int size, int countGiven){  //anurag
+int painterPartition(int arr[], int size, int countGiven){  
     int start=0;
     int sum=0,count=1;
     for(int i=0;i<size;i++){
