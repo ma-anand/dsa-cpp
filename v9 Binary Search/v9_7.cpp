@@ -17,7 +17,7 @@ int painterPartition(int arr[], int size, int countGiven){
     sum=0;
     int mid= start + (end-start)/2;
     while(start<=end){
-        if(isPossible(arr,size,countGiven,mid)){
+        if(isPossible(arr,size,countGiven,mid)){//last third
             sum+=arr[i]
         }
         else{
