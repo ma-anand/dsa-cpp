@@ -22,7 +22,7 @@ int painterPartition(int arr[], int size, int countGiven){
         }
         else{
             count++;
-            if(count>countGiven){
+            if(count>countGiven){ //last
                 return false;  
             }
         }
