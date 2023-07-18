@@ -31,5 +31,5 @@ int main(){
     cin>>key;
     cout<<"Index: "<<binarySearch(evenArr,6,key)<<endl;
     cin>>key;
-    cout<<"Index: "<<binarySearch(oddArr,5,key)<<endl;
+    cout<<"Index: "<<binarySearch(oddArr,5,key)<<endl; //hi
 }
